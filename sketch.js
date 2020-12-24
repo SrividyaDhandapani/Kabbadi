@@ -135,6 +135,19 @@ function draw()
       text("Game Has Ended",400,80); 
       textSize(16);
       text("Press Restart Button To Play Again",300,100);
+      console.log(p1Score + " "+ p2Score);
+      
+      textSize(40)
+      if(p1Score > p2Score)
+      {
+        fill("red");
+        text("Red Player won the game :"+p1Score, 400,300)
+      }
+      else
+      {
+        fill("yellow");
+        text("Yellow Player won the game :"+p2Score, 400,300)
+      }
     }
 
     //if have to toss again
@@ -204,6 +217,8 @@ function draw()
     
     
   }
+
+ 
 
   // if game ends
   if((p1Score>=20 || p2Score>=20)&&flag===0)
